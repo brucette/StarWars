@@ -1,6 +1,10 @@
-/* textarea {
+textarea {
     resize: none;
-} */
+}
 h3 {
     color: blueviolet;
+}
+form, label {
+    display: flex;
+    flex-direction: column;
 }
