@@ -1,10 +1,72 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    background-image: url('star-wars-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: yellow;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+button, textarea, h3 {
+    background-color: #3d3c3c; 
+    padding: 1rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+input {
+    background-color: #3d3c3c; 
+    color: whitesmoke;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+}
+
+button {
+    background-color: rgba(255, 255, 0, 0.7);
+    width: 50%;
+    align-self: center;
+    font-weight: bold;
+    color: #3d3c3c;    
+}
+
 textarea {
     resize: none;
+    text-align: left;
+    color: whitesmoke;  
+    letter-spacing: 2px;
+    font-size: 1.2rem;  
 }
+
 h3 {
-    color: blueviolet;
+    background-color: #3d3c3c;
 }
+
 form, label {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid rgba(255, 255, 0, 0.7);
 }

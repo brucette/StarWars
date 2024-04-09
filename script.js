@@ -3,7 +3,7 @@ const output = document.querySelector('#output');
 
 
 function fetchCharacter(name) {
-    output.innerHTML = `<textarea cols="40" rows="10" readonly></textarea>`;
+    output.innerHTML = `<textarea cols="50" rows="10" readonly></textarea>`;
 
     let response = {};
 
@@ -16,17 +16,15 @@ function fetchCharacter(name) {
     .then(data => {
         if(data.result.length == 0) {
             output.innerHTML = `
-            <textarea cols="40" rows="10" readonly>
-            No such character in the universe!
-            </textarea>
+            <textarea cols="50" rows="10" readonly>No such character in the universe!</textarea>
             `
         }
         else {
             response = data.result[0].properties;
             output.innerHTML = `
-                <h3>Here are the results for ${response.name}</h3>
-                <textarea cols="40" rows="10" readonly>
-                Height: ${response.height}\n 
+                <h3>${response.name}:</h3>
+                <textarea cols="50" rows="10" readonly>
+                Height: ${response.height}\n
                 Mass: ${response.mass}\n 
                 Gender: ${response.gender}\n 
                 Hair color: ${response.hair_color}\n 
@@ -34,7 +32,10 @@ function fetchCharacter(name) {
             `
         }
     })
-    .catch(err => console.log(err))
+    .catch(err => { 
+        console.log(err);
+        output.innerHTML = "Something went wrong, try again!";
+    })
 }
 
 form.addEventListener('submit', (event) => {
